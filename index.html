@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N0r7hSt4r</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 加载动画 -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-circle"></div>
+            <div class="loading-text">系统加载中</div>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="loading-details">初始化安全协议...</div>
+        </div>
+    </div>
+
+    
+    <!-- 自定义光标 -->
+    <div class="cursor"></div>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="N0r7hSt4r.png" alt="N0r7hSt4r Logo" class="nav-logo">
+            <span>N0r7hSt4r</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="active">首页</a>
+            <a href="#about">团队介绍</a>
+            <a href="#members">成员展示</a>
+            <a href="#contact">加入我们</a>
+        </div>
+    </nav>
+
+    <!-- 首页部分 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="N0r7hSt4r.png" alt="N0r7hSt4r Logo" class="main-logo">
+                <!-- 新增的微信公众号链接 -->
+                <div class="wechat-link" style="margin-top: 15px;">
+                    <a href="https://mp.weixin.qq.com/s/AUWjIytzCi3YLNi9OqJofg" target="_blank" style="color: #00ff00; text-decoration: none;">
+                        <i class="fab fa-weixin" style="font-size: 24px;"></i>
+                        <span style="margin-left: 8px;">关注我们的公众号</span>
+                    </a>
+                </div>
+            </div>
+            <h1 class="glitch typewriter" data-text="N0r7hSt4r">N0r7hSt4r</h1>
+            <p class="subtitle typewriter-subtitle"></p>
+            <div class="cyber-button">
+                <button onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">加入我们</button>
+            </div>
+        </div>
+        <div class="particles" id="particles-js"></div>
+    </section>
+
+    <!-- 团队介绍部分 -->
+    <section id="about" class="about">
+        <h2 class="section-title">团队介绍</h2>
+        <div class="about-content">
+            <div class="about-card" onclick="scrollToMission()">
+                <i class="fas fa-users"></i>
+                <h3>人才培养</h3>
+                <p>注重团队成员成长，学长一对一专业帮助辅导</p>
+                <span class="card-hover-text">点我查看</span>
+            </div>
+            <div class="about-card" onclick="scrollToAchievements()">
+                <i class="fas fa-shield-alt"></i>
+                <h3>安全竞赛</h3>
+                <p>专注于安全技术研究，积极参与国内外各大网络安全赛事</p>
+                <span class="card-hover-text">点我查看</span>
+            </div>
+            <div class="about-card" onclick="window.location.href='writeups.html'">
+                <i class="fas fa-code"></i>
+                <h3>技术分享</h3>
+                <p>分享战队参加的赛事WriteUp，方便大家交流学习</p>
+                <span class="card-hover-text">点我查看</span>
+            </div>
+            <div class="about-card" onclick="window.location.href='#contact'">
+                <i class="fas fa-envelope"></i>
+                <h3>加入我们</h3>
+                <p>欢迎对网络安全感兴趣的同学加入我们的团队</p>
+                <span class="card-hover-text">点我查看</span>
+            </div>
+        </div>
+        <div id="mission" class="team-mission">
+            <div class="mission-text">
+                <p class="highlight">「用热爱点燃技术，用实战磨砺锋芒」</p>
+                <p>北方工业大学N0r7hSt4r战队，一支成立于2024年的CTF战队，由怀揣网络安全梦想的在校生集结而成。"N0r7hSt4r"（NorthStar·北极星）——寓意在浩瀚的网络安全领域中，我们如北极星般坚定方向，彼此指引。我们因热爱而相聚，以赛场为课堂，在攻防对抗中锤炼技术，在团队协作中共同成长。</p>
+                <ul>
+                    <li><span class="tech-area">从零开始，敢打敢拼</span> - 虽是新军，但无畏强手，活跃于国内外CTF赛事</li>
+                    <li><span class="tech-area">技术全面，攻防兼备</span> - 涵盖Web渗透、逆向工程、密码分析、二进制漏洞利用、取证与应急响应等核心方向</li>
+                    <li><span class="tech-area">以赛促学，实战为王</span> - 通过不断比赛联系和赛后复盘持续精进</li>
+                    <li><span class="tech-area">开放共享，传承创新</span> - 建立团队技术分享平台，队内队外分享安全技术</li>
+                </ul>
+                <p>我们坚信，唯有持续突破与创新，才能在瞬息万变的网络安全浪潮中屹立潮头。通过技术分享和众多实战演练，我们打造了一个技术共进的成长生态。在这里，每一次思维碰撞都是突破的契机，每场赛事历练都是蜕变的开始。</p>
+                <p>如果你渴望在CTF赛场上挥斥方遒，或想深入网络安全的技术殿堂，这里正是你启航的港湾。与志同道合的伙伴并肩，在凌晨三点的调试中见证成长，在获奖时刻的欢呼里收获荣耀——我们将以北极星般的恒心，共同探索网络安全的璀璨星河。</p>
+            </div>
+        </div>
+
+        <div class="achievements" id="achievements">
+            <div class="achievements-content">
+                <h3 class="achievements-title">团队荣誉</h3>
+                <div class="achievements-grid auto-scroll" id="achievementsGrid">
+                    <!-- 成就卡片将通过JavaScript动态加载 -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成员展示部分 -->
+    <section id="members" class="members">
+        <h2 class="section-title">核心成员</h2>
+        <div class="members-container">
+            <div class="members-scroll">
+                <div class="members-grid" id="membersGrid">
+                    <!-- 成员卡片将通过JavaScript动态加载 -->
+                </div>
+            </div>
+            <button class="scroll-btn scroll-left">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="scroll-btn scroll-right">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <button class="expand-btn">
+                <span>展开全部</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- 加入我们部分 -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">加入我们</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h5 class="contact-subtitle"><i class="fas fa-location-dot"></i>&nbsp北方工业大学</h5>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="/cdn-cgi/l/email-protection#4f2c20213b2e2c3b0f217f3d78273c3b7b3d612c2022" class="email-link" onclick="showEmailInfo(event)"><span class="__cf_email__" data-cfemail="1a7975746e7b796e5a742a682d72696e2e68347974">[email&#160;protected]</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>&copy; 2025 N0r7hSt4r-北方工业大学信安协会. All rights reserved.</p>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
