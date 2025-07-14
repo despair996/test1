@@ -1478,9 +1478,7 @@ a, button, .about-card, .member-card, .scroll-btn, .expand-btn {
 }
 
 .achievements-grid.auto-scroll {
-    animation: none;
-    display: flex;
-    gap: 2rem;
+    animation: scrollLeft 30s linear infinite;
 }
 
 .achievements-scroll-container {
@@ -1721,3 +1719,30 @@ a, button, .about-card, .member-card, .scroll-btn, .expand-btn {
     justify-content: center;
     margin-top: 0.3rem;
 } 
+
+/* 成果展示自动滚动动画 */
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* 滚动容器样式 */
+.scroll-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+#achievementsGrid {
+    display: flex;
+    width: max-content;
+    animation: scrollLeft 30s linear infinite;
+}
+
+/* 鼠标悬停时暂停滚动 */
+.scroll-wrapper:hover #achievementsGrid {
+    animation-play-state: paused;
+}
